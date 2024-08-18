@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet">
+</head>
+<body>
+    <div class="calculadora">
+        <div class="flexy">
+            <h1>Calculadora</h1>
+            <div class="switch">
+                <input type="checkbox" id="toggleSwitch">
+                <label for="toggleSwitch" class="switch-slider"></label>
+            </div>
+        </div>
+        <div id="calculator-basic">
+            <div class="display">
+                <input type="text" id="display" disabled>
+            </div>
+            <div class="buttons">
+                <!-- Botones de la calculadora básica -->
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="deleteLastCharacter()" class="okupa2"><img src="borrar.png" alt="del" width="30px"></button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('*')">x</button>
+                <button onclick="clearDisplay()" class="okupa">C</button>
+                <button onclick="calculateResult()" class="okupa1">=</button>
+            </div>
+        </div>
+        <div id="calculator-scientific" style="display: none;">
+            <div class="display">
+                <input type="text" id="display-scientific" disabled>
+            </div>
+            <div class="buttons">
+                <!-- Botones de la calculadora científica -->
+                <button onclick="appendToDisplayScientific('7')">7</button>
+                <button onclick="appendToDisplayScientific('8')">8</button>
+                <button onclick="appendToDisplayScientific('9')">9</button>
+                <button onclick="deleteLastCharacter()" class="okupa2"><img src="borrar.png" alt="del" width="30px"></button>
+
+                <button onclick="appendToDisplayScientific('4')">4</button>
+                <button onclick="appendToDisplayScientific('5')">5</button>
+                <button onclick="appendToDisplayScientific('6')">6</button>
+                <button onclick="appendToDisplayScientific('/')">/</button>
+
+                <button onclick="appendToDisplayScientific('1')">1</button>
+                <button onclick="appendToDisplayScientific('2')">2</button>
+                <button onclick="appendToDisplayScientific('3')">3</button>
+                <button onclick="appendToDisplayScientific('*')">x</button>
+                
+                <button onclick="appendToDisplayScientific('.')">.</button>
+                <button onclick="appendToDisplayScientific('0')">0</button>
+                <button onclick="appendToDisplayScientific('+')">+</button>
+                <button onclick="appendToDisplayScientific('-')">-</button>
+                <button onclick="appendToDisplayScientific('sqrt(')">√</button>
+                <button onclick="appendToDisplayScientific('pow(')">x²</button>
+                <button onclick="appendToDisplayScientific(')')">)</button>
+                <button onclick="appendToDisplayScientific('(')">(</button>
+                <button onclick="clearDisplayScientific()" class="okupa">C</button>
+                <button onclick="calculateResultScientific()" class="okupa1">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
+
+
+
+
